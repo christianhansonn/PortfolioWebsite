@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+}
+
+.bannerPic img {
+    width: 450px;
+    height: 928px;
+    overflow: hidden;
+}
+
+.about {
+    padding-left: 50%;
+    text-align: center;
+}
+
+.about p {
+    color: grey;
+    font-size: 29px;
+    position: relative;
+    top: -650px;
+}
+
+.about a {
+    font-size: 29px;
+    color: black;
+    text-decoration: underline;
+    font-weight: bold;
+    position: relative;
+    top: -620px;
+}
+
