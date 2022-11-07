@@ -8,14 +8,22 @@ body {
 }
 
 .bannerPic img {
-    width: 450px;
-    height: 928px;
-    overflow: hidden;
+    width: 50%;
+    position: absolute;
+    left: 0px;
+    height: 100%;
+}
+
+#rightHalf {
+    width: 48%;
+    position: absolute;
+    right: 0px;
 }
 
 .about {
     padding-left: 50%;
     text-align: center;
+    background-attachment: scroll;
 }
 
 .about p {
