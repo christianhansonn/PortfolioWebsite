@@ -36,11 +36,15 @@ body {
     font-size: 29px;
 }
 
-.about a {
+.projects a {
     font-size: 29px;
     color: black;
     text-decoration: underline;
     font-weight: bold;
+}
+
+.projects {
+    font-size: 23px;
 }
 
 .project-list li {
@@ -61,5 +65,10 @@ body {
   }
 
   .social {
-    display: inline;
+    display: inline-flex;
+  }
+
+  .social p {
+    margin-top: 25px;
+    font-size: 15px;
   }
