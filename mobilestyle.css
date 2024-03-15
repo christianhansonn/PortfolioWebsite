@@ -10,9 +10,10 @@ body {
 }
 
 .bannerPic {
+    position: fixed;
+    width: 100%; /* Adjusted width */
     background: url('./Files/bannerpictureCrop.JPG') no-repeat center center;
-    width: 100%;
-    height: auto;
+    background-size: cover;
 }
 
 .about {
