@@ -1,7 +1,7 @@
 /* Stylesheet for desktop screens */
 body, html {
     margin: 0;
-    font-size: 29px; /* Adjusted base font size */
+    font-size: 18px; /* Adjusted base font size */
     color: grey;
     height: 100%;
     font-family: 'Poppins', sans-serif;
@@ -13,11 +13,13 @@ ul.skill-list {
 ul.skill-list li {
     font-size: 0.9em; /* Adjust the size as needed */
 }
+
 .skills a {
     font-size: 29px;
     color: black;
     text-decoration: underline;
     font-weight: bold;
+
 .bannerPic {
     position: fixed;
     top: 0;
@@ -37,24 +39,3 @@ ul.skill-list li {
     padding: 20px;
     box-sizing: border-box;
 }
-
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-  }
-  .fa-linkedin {
-    margin-bottom: 5px;
-  }
-
-  .social {
-    display: inline;
-    display: inline-flex;
-  }
-
-  .social p {
-    margin-top: 25px;
-    font-size: 15px;
-  }
