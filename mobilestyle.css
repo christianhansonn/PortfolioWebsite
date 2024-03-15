@@ -22,18 +22,15 @@ body {
 
 .about p {
     color: grey;
-    font-size: 29px;
 }
 
 .skills a {
-    font-size: 29px;
     color: black;
     text-decoration: underline;
     font-weight: bold;
 }
 
 .skills {
-    font-size: 23px;
     text-align: center;
 }
 
@@ -44,7 +41,7 @@ body {
 
 .fa {
     padding: 12px; /* Reduced padding */
-    font-size: 24px; /* Reduced font size */
+    font-size: 23px; /* Reduced font size */
     width: 40px; /* Adjusted width */
     text-align: center;
     text-decoration: none;
