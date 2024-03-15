@@ -1,5 +1,10 @@
 /* Stylesheet for desktop screens */
+
 * {
+    font-size: 29px;
+}
+
+body, html {
     margin: 0;
     font-size: 29px; /* Adjusted base font size */
     color: grey;
