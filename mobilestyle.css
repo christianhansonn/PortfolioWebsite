@@ -1,7 +1,7 @@
 * {
     margin: 0;
-    padding: 0;
-    font-size: 29px;
+    padding: 10;
+    font-size: 23px;
     color: grey;
 }
 
@@ -25,25 +25,25 @@ body {
     font-size: 29px;
 }
 
-.projects a {
+.skills a {
     font-size: 29px;
     color: black;
     text-decoration: underline;
     font-weight: bold;
 }
 
-.projects {
+.skills {
     font-size: 23px;
     text-align: center;
 }
 
-.project-list li {
+.skills-list li {
     list-style-type: circle;
     list-style-position: inside;
 }
 
 .fa {
-    padding: 10px; /* Reduced padding */
+    padding: 12px; /* Reduced padding */
     font-size: 24px; /* Reduced font size */
     width: 40px; /* Adjusted width */
     text-align: center;
