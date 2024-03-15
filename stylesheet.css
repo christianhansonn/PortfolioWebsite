@@ -14,7 +14,7 @@ ul.skill-list li {
     font-size: 0.9em; /* Adjust the size as needed */
 }
 
-.bannerPic {
+.bannerPic img {
     position: fixed;
     top: 0;
     bottom: 0;
