@@ -9,7 +9,7 @@ body {
     font-family: Poppins, sans-serif;
 }
 
-.bannerPic img {
+.bannerPic {
     width: 100%;
     height: auto;
 }
