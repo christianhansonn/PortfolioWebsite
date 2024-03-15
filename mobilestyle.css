@@ -10,6 +10,7 @@ body {
 }
 
 .bannerPic {
+    background: url('./Files/bannerpictureCrop.JPG') no-repeat center center;
     width: 100%;
     height: auto;
 }
