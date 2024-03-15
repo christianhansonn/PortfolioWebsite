@@ -43,12 +43,12 @@ body {
 }
 
 .fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
+    padding: 10px; /* Reduced padding */
+    font-size: 24px; /* Reduced font size */
+    width: 40px; /* Adjusted width */
     text-align: center;
     text-decoration: none;
-  }
+}
 
   .fa-linkedin {
     margin-bottom: 5px;
