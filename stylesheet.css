@@ -43,3 +43,24 @@ ul.skill-list li {
     box-sizing: border-box;
 }
 
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .fa-linkedin {
+    margin-bottom: 5px;
+  }
+
+  .social {
+    display: inline;
+    display: inline-flex;
+  }
+
+  .social p {
+    margin-top: 25px;
+    font-size: 15px;
+  }
+
