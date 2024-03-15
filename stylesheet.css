@@ -1,7 +1,7 @@
 /* Stylesheet for desktop screens */
 body, html {
     margin: 0;
-    font-size: 18px; /* Adjusted base font size */
+    font-size: 29px; /* Adjusted base font size */
     color: grey;
     height: 100%;
     font-family: 'Poppins', sans-serif;
@@ -27,7 +27,7 @@ ul.skill-list li {
     top: 0;
     bottom: 0;
     left: 0;
-    width: 50%; /* Adjusted width */
+    width: 45%; /* Adjusted width */
     background: url('./Files/bannerpicture.JPG') no-repeat center center;
     background-size: cover;
 }
@@ -37,7 +37,7 @@ ul.skill-list li {
     top: 0;
     bottom: 0;
     right: 0;
-    width: 50%; /* Adjusted width */
+    width: 55%; /* Adjusted width */
     overflow-y: auto;
     padding: 20px;
     box-sizing: border-box;
