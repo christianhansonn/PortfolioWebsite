@@ -1,31 +1,23 @@
 /* Stylesheet for desktop screens */
-
-* {
-    font-size: 29px;
-}
-
 body, html {
     margin: 0;
     font-size: 29px; /* Adjusted base font size */
     color: grey;
+    height: 100%;
     font-family: 'Poppins', sans-serif;
 }
-
 ul.skill-list {
     list-style-type: none;
     padding-left: 0;
 }
-
 ul.skill-list li {
     font-size: 0.9em; /* Adjust the size as needed */
 }
-
 .skills a {
     font-size: 29px;
     color: black;
     text-decoration: underline;
     font-weight: bold;
-
 .bannerPic {
     position: fixed;
     top: 0;
@@ -35,7 +27,6 @@ ul.skill-list li {
     background: url('./Files/bannerpicture.JPG') no-repeat center center;
     background-size: cover;
 }
-
 #rightHalf {
     position: absolute;
     top: 0;
@@ -67,4 +58,3 @@ ul.skill-list li {
     margin-top: 25px;
     font-size: 15px;
   }
-
