@@ -1,62 +1,97 @@
-* {
-    margin: 0;
-    padding: 10;
-    font-size: 23px;
+body, html {
+    margin: 5;
+    font-family: 'Poppins', sans-serif;
+    font-size: 19px;
     color: grey;
-}
-
-body {
-    font-family: Poppins, sans-serif;
+    padding-left: 3px;
+    padding-right: 3px;
+    scroll-behavior: auto;
 }
 
 .bannerPic {
-    position: fixed;
-    width: 100%; /* Adjusted width */
-    background: url('./Files/bannerpictureCrop.JPG') no-repeat center center;
+    top: 0; /* Align at the top of the page */
+    left: 0;
+    width: 100%;
+    height: 40vh; /* Set the height as needed */
+    background: url('./Files/bannerpictureCrop.JPG') no-repeat center top;
     background-size: cover;
+    background-attachment: local;
+}
+
+
+ul.skill-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+ul.skill-list li {
+    font-size: 0.9em; 
 }
 
 .about {
     text-align: center;
-    margin-top: 150px;
+    margin-top: 70px;
+}
+
+.about a {
+    color: grey;
 }
 
 .about p {
     color: grey;
 }
 
+.secondary_about {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.secondary_about p {
+    color: grey;
+}
+
+.third_about {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.third_about p {
+    color: grey;
+}
+
 .skills a {
-    color: black;
+    color: grey;
     text-decoration: underline;
-    font-weight: bold;
 }
 
 .skills {
+    margin-top: 70px;
     text-align: center;
+    font-size: 18.5px;
 }
 
-.skills-list li {
-    list-style-type: circle;
-    list-style-position: inside;
+.skill-list {
+    font-size: 18px;
 }
 
 .fa {
-    padding: 12px; /* Reduced padding */
-    font-size: 23px; /* Reduced font size */
-    width: 40px; /* Adjusted width */
+    font-size: 23px; 
+    width: 80px; 
     text-align: center;
     text-decoration: none;
+    color: grey;
 }
 
   .fa-linkedin {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 
   .social {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 100%;
+    text-align: center;
     
   }
 
@@ -65,3 +100,7 @@ body {
     font-size: 15px;
     display: none;
   }
+
+a:visited {
+    color: grey;
+}
