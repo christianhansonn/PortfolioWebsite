@@ -32,7 +32,10 @@ function App() {
           </ul>
         </div>
       </nav>
-      <div className="ml-20 flex h-screen items-center" ref={homeRef}>
+      <div
+        className="max-sm:ml-[70px] ml-20 flex h-screen items-center"
+        ref={homeRef}
+      >
         <Home />
       </div>
       <div className="flex" ref={aboutRef}>

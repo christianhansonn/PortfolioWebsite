@@ -6,22 +6,29 @@ export default function Home() {
   return (
     <>
       <div className="relative flex flex-col">
-        <p className="ml-[3px] text-sm">Hi, I'm Christian 👋</p>
-        <p className="text-6xl font-bold text-green-700">Fullstack</p>
-        <p className="text-6xl font-bold text-black">Engineer</p>
-        <p className="ml-[3px] mt-4 text-xs max-sm:w-[80%] sm:w-[45%] md:w-[45%] lg:w-[38%]">
+        <p className="ml-[3px] max-sm:text-xs text-sm">Hi, I'm Christian 👋</p>
+        <p className="text-6xl max-sm:text-4xl font-bold text-green-700">
+          Fullstack
+        </p>
+        <p className="text-6xl max-sm:text-4xl font-bold text-black">
+          Engineer
+        </p>
+        <p className="ml-[3px] max-sm:mt-2 mt-4 text-xs max-sm:w-[80%] sm:w-[45%] md:w-[45%] lg:w-[38%]">
           I'm an AWS Certified, Software Engineer with experience building front
           and back end systems using React, Typescript, and Python.
         </p>
         {/* <div className="absolute mt-5 flex w-[35.5%] items-center justify-center max-sm:w-[77%]"> */}
-        <div className="flexjustify-center mt-5 max-sm:w-[80%]">
+        <div className="flexjustify-center mt-5 max-sm:w-[90%]">
           <Button
-            className="mr-2"
+            className="mr-2 max-sm:text-xs"
             url="https://www.linkedin.com/in/christianhansonn/"
           >
             Linkedin
           </Button>
-          <Button url="https://github.com/christianhansonn/PortfolioProject">
+          <Button
+            className="max-sm:text-xs"
+            url="https://github.com/christianhansonn/PortfolioProject"
+          >
             GitHub{" "}
             <span alt="github-logo" id="github-logo" className="fa fa-github" />
           </Button>

@@ -15,7 +15,7 @@ export default function About() {
     window.open(
       "https://www.credly.com/badges/802048a5-2802-46cf-bb82-874b94ba7b4e/linked_in_profile",
       "_blank",
-      "noreferrer",
+      "noreferrer"
     );
   };
 
@@ -23,7 +23,7 @@ export default function About() {
     <>
       <div
         id="about"
-        className="flex justify-center bg-[#808080] py-10 text-white"
+        className="max-sm:text-xs flex justify-center bg-[#808080] py-10 text-white"
       >
         <div className="m-4 mt-5 flex w-[80%] flex-col items-center justify-center">
           <p>
@@ -43,7 +43,7 @@ export default function About() {
                     <FontAwesomeIcon icon={faPython} size="xl" />
                   ) : (
                     "Python"
-                  ),
+                  )
                 )
               }
               className="cursor-pointer font-semibold underline"
@@ -58,7 +58,7 @@ export default function About() {
                     <FontAwesomeIcon icon={faSquareJs} size="xl" />
                   ) : (
                     "JavaScript"
-                  ),
+                  )
                 )
               }
               className="cursor-pointer font-semibold underline"
@@ -73,7 +73,7 @@ export default function About() {
                     <FontAwesomeIcon icon={faReact} size="xl" />
                   ) : (
                     "React"
-                  ),
+                  )
                 )
               }
               className="cursor-pointer font-semibold underline"
