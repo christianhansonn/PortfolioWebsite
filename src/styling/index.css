@@ -580,12 +580,6 @@ video {
   --blue: #223c69;
 }
 
-@font-face {
-  font-family: "JennaSue";
-
-  src: url("/fonts/JENNASUEPRO.TTF");
-}
-
 body,
 html {
   height: 100%;
