@@ -45,7 +45,7 @@ function App() {
       <div className="flex" ref={aboutRef}>
         <About />
       </div>
-      <div className="ml-4 mt-10 pb-10" ref={projectRef}>
+      <div className="mx-4 mt-10 pb-10" ref={projectRef}>
         <Projects />
       </div>
     </>
