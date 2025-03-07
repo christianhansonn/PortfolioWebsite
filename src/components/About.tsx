@@ -1,99 +1,44 @@
-import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPython,
-  faReact,
-  faSquareJs,
-} from "@fortawesome/free-brands-svg-icons";
+interface HighlightTextProps {
+  children: React.ReactNode;
+  onClick?: () => void;
+}
 
-type TextState = string | JSX.Element;
+const HighlightText: React.FC<HighlightTextProps> = ({ children, onClick }) => (
+  <span
+    onClick={onClick}
+    className={`font-bold ${onClick ? "cursor-pointer underline" : ""}`}
+  >
+    {children}
+  </span>
+);
 
 export default function About() {
-  const [reactText, setReactText] = useState<TextState>("React");
-  const [jsText, setJsText] = useState<TextState>("JavaScript");
-  const [pythonText, setPythonText] = useState<TextState>("Python");
-
-  const navigate = () => {
-    window.open(
-      "https://www.credly.com/badges/802048a5-2802-46cf-bb82-874b94ba7b4e/linked_in_profile",
-      "_blank",
-      "noreferrer",
-    );
-  };
-
   return (
-    <>
-      <div
-        id="about"
-        className="flex justify-center bg-[#808080] py-10 text-white max-sm:text-xs"
-      >
-        <div className="m-4 mt-5 flex w-[80%] flex-col items-center justify-center">
-          <p>
-            I'm an{" "}
-            <span
-              onClick={navigate}
-              className="cursor-pointer font-semibold underline"
-            >
-              AWS Certified
-            </span>
-            , Software Engineer with expertise in building applications to
-            handle large amounts of data using{" "}
-            <span
-              onClick={() =>
-                setPythonText(
-                  pythonText === "Python" ? (
-                    <FontAwesomeIcon icon={faPython} size="xl" />
-                  ) : (
-                    "Python"
-                  ),
-                )
-              }
-              className="cursor-pointer font-semibold underline"
-            >
-              {pythonText}
-            </span>{" "}
-            and{" "}
-            <span
-              onClick={() =>
-                setJsText(
-                  jsText === "JavaScript" ? (
-                    <FontAwesomeIcon icon={faSquareJs} size="xl" />
-                  ) : (
-                    "JavaScript"
-                  ),
-                )
-              }
-              className="cursor-pointer font-semibold underline"
-            >
-              {jsText}
-            </span>{" "}
-            frameworks like Typescript and{" "}
-            <span
-              onClick={() =>
-                setReactText(
-                  reactText === "React" ? (
-                    <FontAwesomeIcon icon={faReact} size="xl" />
-                  ) : (
-                    "React"
-                  ),
-                )
-              }
-              className="cursor-pointer font-semibold underline"
-            >
-              {reactText}
-            </span>
-            . These applications handle these various data streams through data
-            pipelines, APIs, and cloud computing services to do data analysis,
-            machine learning, and create data visualizations.
-          </p>
-          <p className="mt-4">
-            My diverse skill set includes architecting high-performing and
-            scalable backends with Django and Flask, creating interactive
-            frontends with React and Tailwind, and developing comprehensive
-            automated testing frameworks with Selenium and Playwright.
-          </p>
-        </div>
+    <div id="about" className="bg-[#808080] py-10 text-white max-sm:text-xs">
+      <div className="mx-auto w-[80%] space-y-4">
+        <p>
+          I specialize in developing{" "}
+          <HighlightText>
+            fault-tolerant APIs, cloud-based data pipelines, and AI-powered
+            automations
+          </HighlightText>{" "}
+          to streamline workflows and uncover insights. My expertise spans{" "}
+          <HighlightText>backend development with Django</HighlightText>,{" "}
+          <HighlightText>
+            frontend development with React and Tailwind
+          </HighlightText>
+          , and{" "}
+          <HighlightText>
+            automation and E2E testing with Playwright
+          </HighlightText>
+          . I'm passionate about{" "}
+          <HighlightText>leading key projects</HighlightText>,{" "}
+          <HighlightText>mentoring engineers</HighlightText>, and creating
+          solutions that can both{" "}
+          <HighlightText>drive efficiency and innovation</HighlightText>, and be{" "}
+          <HighlightText>adopted across the entire organization</HighlightText>.
+        </p>
       </div>
-    </>
+    </div>
   );
 }

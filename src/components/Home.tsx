@@ -1,6 +1,11 @@
 import bannerImage from "/image/bannerpicture.jpeg";
 import Button from "../utils/Button";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faAws } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
+library.add(faAws as IconDefinition);
 export default function Home() {
   return (
     <>
@@ -13,18 +18,19 @@ export default function Home() {
           Engineer
         </p>
         <p className="ml-[3px] mt-4 text-xs max-sm:mt-2 max-sm:w-[80%] sm:w-[45%] md:w-[45%] lg:w-[38%]">
-          I'm an AWS Certified, Software Engineer with experience building front
-          and back end systems using React, Typescript, and Python.
+          I'm an AWS Certified Software Engineer with 4+ years of experience
+          building scalable, data-drive frontend and backend applications using
+          React, Typescript, and Python.
         </p>
-        <div className="flexjustify-center mt-5 max-sm:w-[90%]">
+        <div className="mt-5 justify-center max-sm:w-[90%]">
           <Button
-            className="mr-2 max-sm:text-xs"
+            className="max-sm:text-xs"
             url="https://www.linkedin.com/in/christianhansonn/"
           >
             Linkedin
           </Button>
           <Button
-            className="max-sm:text-xs"
+            className="mx-2 max-sm:text-xs"
             url="https://github.com/christianhansonn/PortfolioProject"
           >
             GitHub{" "}
@@ -33,6 +39,15 @@ export default function Home() {
               aria-label="GitHub logo"
               className="fa fa-github"
             />
+          </Button>
+          <Button
+            className="max-sm:text-xs"
+            url="https://www.credly.com/badges/802048a5-2802-46cf-bb82-874b94ba7b4e/linked_in_profile"
+          >
+            <span role="img" aria-label="AWS logo">
+              <FontAwesomeIcon icon={faAws as IconDefinition} />{" "}
+            </span>
+            Certification
           </Button>
         </div>
       </div>
