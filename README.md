@@ -5,6 +5,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-Styling-purple.svg)](https://tailwindcss.com/)
 [![Vite](https://img.shields.io/badge/Vite-Build_Tool-yellow.svg)](https://vitejs.dev/)
 
+
 ## Overview
 
 This project showcases my professional portfolio website built with modern web technologies. Using React and TypeScript, I've created a responsive and interactive platform to demonstrate my technical expertise and project work. The site emphasizes clean design, performance optimization, and best practices in modern web development.
