@@ -4,7 +4,20 @@ import webScrape from "/image/webscrape.jpg";
 import machineLearning from "/image/machine-learning.jpg";
 import { twMerge } from "tailwind-merge";
 
-function Card({ children, source, url, gradientClass = "", ...props }) {
+interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+  children: React.ReactNode;
+  source: string;
+  url: string;
+  gradientClass?: string;
+}
+
+function Card({
+  children,
+  source,
+  url,
+  gradientClass = "",
+  ...props
+}: CardProps) {
   const navigate = () => {
     window.open(url, "_blank", "noreferrer");
   };
@@ -13,6 +26,7 @@ function Card({ children, source, url, gradientClass = "", ...props }) {
     "absolute inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent",
     gradientClass,
   );
+
   return (
     <div
       {...props}
@@ -37,7 +51,7 @@ export default function Projects() {
       <div className="m-2 max-w-xs cursor-pointer">
         <Card
           source={pipeline}
-          url="https://github.com/christianhansonn/PortfolioDataPipeline"
+          url="https://github.com/christianhansonn/PortfolioProject/tree/main/Data_Pipeline"
         >
           <h3 className="pl-4 font-bold max-md:text-[14px] max-md:leading-4 md:text-sm lg:text-lg">
             AWS Data Pipeline
@@ -51,7 +65,7 @@ export default function Projects() {
       <div className="m-2 max-w-xs cursor-pointer">
         <Card
           source={webScrape}
-          url="https://github.com/christianhansonn/PortfolioWebScrape"
+          url="https://github.com/christianhansonn/PortfolioProject/tree/main/Python/WebScrape"
           gradientClass="from-black/80"
         >
           <h3 className="pl-4 font-bold max-md:text-[14px] max-md:leading-4 md:text-sm lg:text-lg">
@@ -66,7 +80,7 @@ export default function Projects() {
       <div className="m-2 max-w-xs cursor-pointer max-[800px]:ml-2">
         <Card
           source={machineLearning}
-          url="https://github.com/christianhansonn/PortfolioProject/blob/main/Machine%20Learning%20Predictions.ipynb"
+          url="https://github.com/christianhansonn/PortfolioProject/blob/main/Python/Machine%20Learning%20Predictions.ipynb"
         >
           <h3 className="pl-4 font-bold max-md:text-[14px] max-md:leading-4 md:text-sm lg:text-lg">
             Machine Learning

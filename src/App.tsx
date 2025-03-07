@@ -1,17 +1,17 @@
-import React, { useEffect, useRef } from "react";
+import { useRef } from "react";
 import Home from "./components/Home";
 import About from "./components/About";
 import Projects from "./components/Projects";
 
 function App() {
-  const navRef = useRef(null);
-  const homeRef = useRef(null);
-  const aboutRef = useRef(null);
-  const projectRef = useRef(null);
+  const navRef = useRef<HTMLDivElement>(null);
+  const homeRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const projectRef = useRef<HTMLDivElement>(null);
 
-  const homeScroll = () => homeRef.current.scrollIntoView();
-  const aboutScroll = () => aboutRef.current.scrollIntoView();
-  const projectScroll = () => projectRef.current.scrollIntoView();
+  const homeScroll = () => homeRef.current?.scrollIntoView();
+  const aboutScroll = () => aboutRef.current?.scrollIntoView();
+  const projectScroll = () => projectRef.current?.scrollIntoView();
 
   const navFormat =
     "mx-2 text-sm font-bold hover:cursor-pointer hover:text-black hover:underline";
