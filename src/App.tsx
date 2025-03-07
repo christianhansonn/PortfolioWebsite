@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Projects from "./components/Projects";
 
+
 function App() {
   const navRef = useRef<HTMLDivElement>(null);
   const homeRef = useRef<HTMLDivElement>(null);
