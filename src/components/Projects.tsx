@@ -1,96 +1,110 @@
-import React from "react";
-import pipeline from "/image/data-pipeline.png";
-import webScrape from "/image/webscrape.jpg";
-import machineLearning from "/image/machine-learning.jpg";
-import { twMerge } from "tailwind-merge";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faComments,
+  faServer,
+  faChartLine,
+  faBolt,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
-interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
-  children: React.ReactNode;
-  source: string;
-  url: string;
-  gradientClass?: string;
+library.add(faComments, faServer, faChartLine, faBolt);
+
+interface ProjectCardProps {
+  title: string;
+  description: string;
+  tags: string[];
+  accentFrom: string;
+  accentTo: string;
+  icon: IconDefinition;
 }
 
-function Card({
-  children,
-  source,
-  url,
-  gradientClass = "",
-  ...props
-}: CardProps) {
-  const navigate = () => {
-    window.open(url, "_blank", "noreferrer");
-  };
-
-  const formatting = twMerge(
-    "absolute inset-0 flex items-end bg-gradient-to-t from-black/60 to-transparent",
-    gradientClass,
-  );
-
+function ProjectCard({ title, description, tags, accentFrom, accentTo, icon }: ProjectCardProps) {
   return (
-    <div
-      {...props}
-      className="group relative max-w-xs overflow-hidden rounded-2xl shadow-lg max-md:h-[180px] lg:h-[230px]"
-      onClick={navigate}
-    >
-      <img
-        src={source}
-        alt=""
-        className="h-full w-full object-cover transition-transform duration-200 group-hover:scale-110"
-      />
-      <div className={formatting}>
-        <div className="p4 text-white">{children}</div>
+    <div className="glass-card relative flex flex-col rounded-2xl p-6 hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(34,211,238,0.15)] transition-all duration-300 overflow-hidden">
+      {/* Top accent bar */}
+      <div className={`absolute left-0 right-0 top-0 h-[2px] rounded-t-2xl bg-gradient-to-r ${accentFrom} ${accentTo}`} />
+      <div className="mb-4 text-2xl text-cyan-400">
+        <FontAwesomeIcon icon={icon} />
+      </div>
+      <h3 className="mb-2 text-base font-bold text-white" style={{ fontFamily: "Space Grotesk, sans-serif" }}>
+        {title}
+      </h3>
+      <p className="mb-4 flex-1 text-sm leading-relaxed text-slate-400">{description}</p>
+      <div className="flex flex-wrap gap-2">
+        {tags.map((tag) => (
+          <span
+            key={tag}
+            className="rounded border border-cyan-500/20 bg-cyan-500/5 px-2.5 py-0.5 text-xs text-slate-300 hover:border-cyan-400/50 hover:text-cyan-300 hover:shadow-[0_0_8px_rgba(34,211,238,0.2)] transition-all duration-200"
+          >
+            {tag}
+          </span>
+        ))}
       </div>
     </div>
   );
 }
 
+const projects: ProjectCardProps[] = [
+  {
+    title: "Document Chat Platform",
+    description:
+      "LangChain RAG pipeline with Azure AI Search vector search over a Snowflake data layer — reduced enterprise document review from ~1 hour to seconds.",
+    tags: ["LangChain", "RAG", "Azure AI Search", "Snowflake", "Python"],
+    accentFrom: "from-indigo-500",
+    accentTo: "to-violet-500",
+    icon: faComments as IconDefinition,
+  },
+  {
+    title: "Custom MCP Server",
+    description:
+      "Separation-of-duties layer for AI agent tooling — governed, reusable connections to client data and enterprise services, decoupling agent logic from data access.",
+    tags: ["MCP", "Python", "AI Agents", "API Design"],
+    accentFrom: "from-cyan-500",
+    accentTo: "to-blue-500",
+    icon: faServer as IconDefinition,
+  },
+  {
+    title: "Client Churn Prediction + LangChain Agents",
+    description:
+      "scikit-learn + XGBoost churn model hosted in Snowflake; LangChain agents autonomously conduct client pulse checks and surface at-risk accounts — boosted retention 5%.",
+    tags: ["scikit-learn", "XGBoost", "LangChain", "Snowflake", "Salesforce"],
+    accentFrom: "from-emerald-500",
+    accentTo: "to-cyan-500",
+    icon: faChartLine as IconDefinition,
+  },
+  {
+    title: "Enterprise AI API",
+    description:
+      "Django-based unified AI access layer for OCR processing and LLM interactions via Azure OpenAI and Azure AI Foundry — standardized generative AI capabilities across teams.",
+    tags: ["Django", "Azure OpenAI", "Azure AI Foundry", "OCR", "Python"],
+    accentFrom: "from-orange-500",
+    accentTo: "to-rose-500",
+    icon: faBolt as IconDefinition,
+  },
+];
+
 export default function Projects() {
   return (
-    <div className="flex items-center justify-center max-[800px]:flex-col">
-      <div className="m-2 max-w-xs cursor-pointer">
-        <Card
-          source={pipeline}
-          url="https://github.com/christianhansonn/PortfolioProject/tree/main/Data_Pipeline"
+    <div className="mx-auto w-[85%]">
+      {/* HUD section header */}
+      <div className="mb-12 flex items-center gap-4">
+        <span
+          className="text-xs font-bold uppercase tracking-[0.3em] text-cyan-400/60"
+          style={{ fontFamily: "Orbitron, sans-serif" }}
         >
-          <h3 className="pl-4 font-bold max-md:text-[14px] max-md:leading-4 md:text-sm lg:text-lg">
-            AWS Data Pipeline
-          </h3>
-          <p className="px-4 pb-3 text-xs max-md:text-[12px] max-md:leading-3 md:text-[14px] md:leading-[16px]">
-            This project showcases my abilities process data using a custom
-            Python script and AWS services S3, Glue, and Athena
-          </p>
-        </Card>
+          04
+        </span>
+        <h2 className="text-2xl font-bold text-white" style={{ fontFamily: "Space Grotesk, sans-serif" }}>
+          Projects
+        </h2>
+        <div className="h-px flex-1 bg-gradient-to-r from-cyan-500/40 to-transparent" />
       </div>
-      <div className="m-2 max-w-xs cursor-pointer">
-        <Card
-          source={webScrape}
-          url="https://github.com/christianhansonn/PortfolioProject/tree/main/Python/WebScrape"
-          gradientClass="from-black/80"
-        >
-          <h3 className="pl-4 font-bold max-md:text-[14px] max-md:leading-4 md:text-sm lg:text-lg">
-            BeautifulSoup Webscrape
-          </h3>
-          <p className="px-4 pb-3 text-xs max-md:text-[12px] max-md:leading-3 md:text-[14px] md:leading-[16px]">
-            This project showcases my abilities to webscrape a job board using
-            BeautifulSoup, and then automate job applications with Playwright
-          </p>
-        </Card>
-      </div>
-      <div className="m-2 max-w-xs cursor-pointer max-[800px]:ml-2">
-        <Card
-          source={machineLearning}
-          url="https://github.com/christianhansonn/PortfolioProject/blob/main/Python/Machine%20Learning%20Predictions.ipynb"
-        >
-          <h3 className="pl-4 font-bold max-md:text-[14px] max-md:leading-4 md:text-sm lg:text-lg">
-            Machine Learning
-          </h3>
-          <p className="px-4 pb-3 text-xs max-md:text-[12px] max-md:leading-3 md:text-[14px] md:leading-[16px]">
-            This project showcases my abilities to create and train three simple
-            machine learning models to predict client conversion and boost
-            retention
-          </p>
-        </Card>
+
+      <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+        {projects.map((project) => (
+          <ProjectCard key={project.title} {...project} />
+        ))}
       </div>
     </div>
   );
